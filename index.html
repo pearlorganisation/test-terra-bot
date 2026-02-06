@@ -69,11 +69,11 @@
   <footer class="bg-gray-800 py 6 text-center text-white">
     <p>&copy; 2025 ChatBotPro. All Rights Reserved.</p>
   </footer>
-  <script>
+  <!-- <script>
     (() => {
       // Helper to apply CSS styles
       const css = (el, styles) => Object.assign(el.style, styles);
-
+        const origin =window.location.origin;
       // --- Create Chat Button ---
       const chatButton = document.createElement("button");
       chatButton.textContent = "💬";
@@ -101,7 +101,8 @@
       // --- Create Iframe ---
       const iframe = document.createElement("iframe");
       // The API key and base URL are now directly embedded in the downloaded script
-      iframe.src = `http://localhost:5173/embed?apiKey=bb0738b26a6a02f717a573a4764ed187`;
+      iframe.src = `http://localhost:5173/embed?apiKey=bb0738b26a6a02f717a573a4764ed187&parentDomain=${origin}`;
+     
       css(iframe, {
         position: "fixed",
         top: "0",
@@ -149,6 +150,8 @@
 
       document.body.append(chatButton, iframe, closeButton);
     })();
+  </script> -->
+  <script src="http://localhost:5000/chatbot.js" data-api-key="d5056e11ddeca5dceae0c35e4c991bf6">
   </script>
 </body>
 
